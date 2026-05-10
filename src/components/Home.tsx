@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Files, Bot, Play, Pause, ExternalLink, Award, FileBadge, HeartHandshake, Volume2, VolumeX, Maximize2, Minimize2 } from "lucide-react";
 
 const placeholders = [
-  "src/assets/1760373846057.jpg"
+  "frontend/public/1760373846057.jpg"
 ];
 
 const ExperienceData = [
@@ -13,7 +13,7 @@ const ExperienceData = [
     date: "April 2025 - Present",
     desc: [
       "Conducted CIS benchmarking and Nessus policy compliance assessments to identify OS-level vulnerabilities, implementing hardening controls that improved security compliance by 74% and reduced exploitable attack surface.",
-      "Deployed and supported endpoint and perimeter security controls, delivering global security POCs to evaluate EDR, firewall, and Microsoft solutions (including Crowd Strike Falcon), ensuring SOC alignment and incident readiness.",
+      "Deployed and supported endpoint and perimeter security controls, delivering global security POCs to evaluate EDR, firewall, and Microsoft solutions, ensuring SOC alignment and incident readiness.",
       "Developed Python automation scripts using REST APIs to enforce security controls and streamline operational tasks, improving SOC efficiency, consistency in response actions, and reduction of manual errors."
     ]
   },
@@ -387,7 +387,7 @@ export default function Home() {
             className="relative p-6 rounded-2xl bg-cream/5 border border-cream/10 backdrop-blur-xl shadow-lg border-l-4 border-l-amber"
           >
             <p className="text-cream/80 text-lg md:text-xl leading-relaxed italic">
-              "A cybersecurity engineer who thinks like an attacker to build better defenses. I'm one year into the field and already deep in Detection Engineering, studying adversary behavior, building detection logic, and working to understand the craft at a level most people don't bother with at this stage."
+              "A cybersecurity engineer who thinks like an attacker to build better defenses. One year into the field, going deeper than most people bother with at this stage, because the problems worth solving in this space demand it."
             </p>
           </motion.div>
         </div>
