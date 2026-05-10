@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest: #15201B;
+  --color-cream: #FAF8F5;
+  --color-amber: #FBBF24;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-forest text-cream min-h-screen antialiased m-0 font-sans;
+  }
+}
