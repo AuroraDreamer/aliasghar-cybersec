@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion, type Variants } from "framer-motion";
 import { FileText, BookOpen } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,6 +12,16 @@ const LinkedinIcon = ({ className }: { className?: string }) => (
 );
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const containerVariants: Variants = {
     hidden: { opacity: 0, y: -20 },
     visible: {
@@ -35,9 +46,19 @@ export default function Header() {
       <div className="absolute inset-0 bg-forest/60 backdrop-blur-xl border-b border-cream/10 shadow-lg pointer-events-none" />
 
       {/* Left Axis: Logo / Name */}
-      <motion.div variants={itemVariants} className="relative text-cream font-medium text-xl tracking-tight z-10 flex items-center gap-2 cursor-pointer">
-        <Link to="/" className="hover:text-amber transition-colors duration-300">
-          Threats don't wait. Neither should your defenses.
+      <motion.div variants={itemVariants} className="relative z-10 flex items-center cursor-pointer max-w-[55%] md:max-w-none">
+        <Link to="/" className="hover:text-amber transition-colors duration-500 flex flex-col justify-center">
+          <span className={`transition-all duration-500 origin-left font-bold ${isScrolled ? 'text-xl md:text-2xl text-amber' : 'text-lg md:text-xl text-cream'}`}>
+            Ali Asghar
+          </span>
+          <div className={`grid transition-all duration-500 ${isScrolled ? 'grid-rows-[0fr] opacity-0' : 'grid-rows-[1fr] opacity-100'}`}>
+            <span className="overflow-hidden text-xs md:text-sm text-cream/70 mt-0.5 hidden sm:block">
+              Threats don't wait. Neither should your defenses.
+            </span>
+            <span className="overflow-hidden text-[11px] leading-tight text-cream/70 mt-0.5 sm:hidden pr-2">
+              Cyber Security Engineer
+            </span>
+          </div>
         </Link>
       </motion.div>
 

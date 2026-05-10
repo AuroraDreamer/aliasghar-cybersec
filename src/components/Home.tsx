@@ -187,7 +187,7 @@ function ProjectCard({ project }: { project: typeof ProjectsData[0] }) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className={isTheaterMode
-            ? "fixed inset-0 md:inset-12 z-[100] sm:rounded-none md:rounded-xl overflow-hidden bg-[#15201B]/95 backdrop-blur-3xl border-0 md:border md:border-cream/20 shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col transition-all duration-500"
+            ? "fixed inset-2 sm:inset-4 md:inset-12 z-[100] rounded-xl md:rounded-2xl overflow-hidden bg-[#15201B]/95 backdrop-blur-3xl border border-cream/20 shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col transition-all duration-500"
             : "relative rounded-xl overflow-hidden bg-[#15201B]/80 backdrop-blur-xl border border-cream/20 shadow-[0_0_40px_rgba(251,191,36,0.15)] flex flex-col transition-all duration-500"}
         >
           {/* macOS Title Bar */}
@@ -221,18 +221,20 @@ function ProjectCard({ project }: { project: typeof ProjectsData[0] }) {
             </div>
 
             {/* Video Area */}
-            <div className="relative flex-1 bg-[#0d1410] overflow-hidden group">
-              <video
-                ref={videoRef}
-                className="w-full h-full object-contain"
-                preload="metadata"
-                muted={isMuted}
-                loop
-                playsInline
-              >
-                <source src={project.videoSrc} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+            <div className="relative flex-1 bg-[#0d1410] overflow-hidden group p-2 sm:p-4 md:p-6 flex items-center justify-center">
+              <div className="relative w-full h-full rounded-lg overflow-hidden border border-white/5 bg-black/50 shadow-2xl flex items-center justify-center">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-contain"
+                  preload="metadata"
+                  muted={isMuted}
+                  loop
+                  playsInline
+                >
+                  <source src={project.videoSrc} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
 
               {/* Controls Container */}
               <div className="absolute bottom-4 right-4 z-20 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 focus-within:opacity-100 transition-all duration-300">
