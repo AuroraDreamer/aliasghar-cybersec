@@ -187,7 +187,7 @@ function ProjectCard({ project }: { project: typeof ProjectsData[0] }) {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className={isTheaterMode
-            ? "fixed inset-4 md:inset-12 z-[100] rounded-xl overflow-hidden bg-[#15201B]/95 backdrop-blur-3xl border border-cream/20 shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col transition-all duration-500"
+            ? "fixed inset-0 md:inset-12 z-[100] sm:rounded-none md:rounded-xl overflow-hidden bg-[#15201B]/95 backdrop-blur-3xl border-0 md:border md:border-cream/20 shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col transition-all duration-500"
             : "relative rounded-xl overflow-hidden bg-[#15201B]/80 backdrop-blur-xl border border-cream/20 shadow-[0_0_40px_rgba(251,191,36,0.15)] flex flex-col transition-all duration-500"}
         >
           {/* macOS Title Bar */}
@@ -235,7 +235,7 @@ function ProjectCard({ project }: { project: typeof ProjectsData[0] }) {
               </video>
 
               {/* Controls Container */}
-              <div className="absolute bottom-4 right-4 z-20 flex gap-2 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-all duration-300">
+              <div className="absolute bottom-4 right-4 z-20 flex gap-2 opacity-100 md:opacity-0 md:group-hover:opacity-100 focus-within:opacity-100 transition-all duration-300">
                 <button
                   onClick={toggleMute}
                   className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center text-cream hover:bg-black/70 hover:text-amber transition-all duration-300"
