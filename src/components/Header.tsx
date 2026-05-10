@@ -87,7 +87,7 @@ export default function Header() {
         {/* Resume Button */}
         <motion.a
           variants={itemVariants}
-          href="/assets/Ali Asghar Security Analyst.pdf"
+          href="/Ali Asghar Security Analyst.pdf"
           download
           className="group relative flex items-center gap-2 px-4 h-10 rounded-full bg-amber/90 hover:bg-amber border border-amber/20 hover:border-amber/40 transition-all duration-300 shadow-[0_0_15px_rgba(251,191,36,0.3)] hover:shadow-[0_0_25px_rgba(251,191,36,0.5)] overflow-hidden text-forest font-semibold text-sm"
           whileHover={{ scale: 1.05 }}

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Files, Bot, Play, Pause, ExternalLink, Award, FileBadge, HeartHandshake, Volume2, VolumeX, Maximize2, Minimize2 } from "lucide-react";
 
 const placeholders = [
-  "frontend/public/1760373846057.jpg"
+  "/1760373846057.jpg"
 ];
 
 const ExperienceData = [
