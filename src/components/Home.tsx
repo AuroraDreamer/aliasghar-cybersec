@@ -64,7 +64,15 @@ const ProjectsData = [
   }
 ];
 
-const CertificationsData = [
+interface Certification {
+  name: string;
+  issuer: string;
+  url: string;
+  subLinks: { name: string; url: string; }[];
+  desc?: string;
+}
+
+const CertificationsData: Certification[] = [
   {
     name: "Google Cybersecurity Certification",
     issuer: "Google / Coursera",
